@@ -1,0 +1,48 @@
+.home__image {
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.home__container {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  overflow: hidden;
+}
+
+.home__image__container{
+display: flex;
+height: 100%
+}
+
+.home__arrow {
+  position: absolute; 
+  cursor: pointer;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home__arrow.left {
+  left: 20px;
+  top:10%;
+}
+
+.home__arrow.right {
+  right: 20px;
+  top:10%;
+}
+.home__arrow:hover {
+  color: #888;
+}
+
+.home__row {
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
