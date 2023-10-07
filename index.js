@@ -9,7 +9,8 @@ app.use(express.json());
 const PORT = 5000;
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://amazon-b2t.netlify.app",
   })
 );
 
