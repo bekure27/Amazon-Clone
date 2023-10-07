@@ -1,0 +1,10 @@
+.env
+.env.local
+
+# Ignore Node.js modules
+/node_modules
+
+# Ignore build artifacts
+/dist
+/build
+/.cache
