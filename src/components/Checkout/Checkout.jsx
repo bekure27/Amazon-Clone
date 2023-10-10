@@ -7,6 +7,7 @@ import { useStateValue } from '../../context/Context';
 const Checkout = () => {
  const [{ basket }, dispatch] = useStateValue();
 
+//  console.log(basket)
 
   return (
     <div className="checkout">

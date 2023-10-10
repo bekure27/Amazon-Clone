@@ -12,15 +12,22 @@ import { db } from "../../utils/firebase-config";
 const Payment = () => {
    const [{ basket, user }, dispatch] = useStateValue();
     const navigate = useNavigate();
-    const getBasketTotal = (basket) =>
-      basket.reduce((amount, item) => item.price + amount, 0);
-    const stripe = useStripe();
-    const elements = useElements();
+   const stripe = useStripe();
+const elements = useElements();
 const [error, setError] = useState(null);
  const [disabled, setDisabled] = useState(true);
  const [succeeded, setSucceeded] = useState(false);
  const [processing, setProcessing] = useState("");
  const [clientSecret, setClientSecret] = useState(true);
+
+//  const getBasketTotal = (basket) =>
+//    basket.reduce((amount, item) => item.price + amount, 0);
+const getBasketTotal = (basket) => {
+  const total = basket.reduce((amount, item) => item.price + amount, 0);
+  // console.log("Total Calculation:", total);
+  return total;
+};
+
 
   const handleChange = (e) => {
     setDisabled(e.empty);
@@ -56,11 +63,17 @@ const [error, setError] = useState(null);
         navigate("/orders");
       });
   };
+
+
+
   useEffect(() => {
     const getClientSecret = async () => {
+    const total = getBasketTotal(basket);
+
       const response = await axios({
         method: "post",
-        url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
+        // url: `/payments/create?total=${total * 100}`,
+        url: `/payments/create?total=${100 * 100}`,
       });
      
       setClientSecret(response.data.clientSecret);
@@ -69,6 +82,8 @@ const [error, setError] = useState(null);
 
     getClientSecret();
   }, [basket]);
+
+
 
 // console.log('print client secrte ',clientSecret)
 
