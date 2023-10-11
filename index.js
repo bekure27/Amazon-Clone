@@ -9,14 +9,17 @@ app.use(express.json());
 const PORT = 5000;
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    // origin: "https://amazon-b2t.netlify.app",
+    // origin: "http://localhost:5173",
+    origin: "https://amazon-b2t.netlify.app",
   })
 );
 
 app.use((req, res, next) => {
-  // res.setHeader("Access-Control-Allow-Origin", "https://amazon-b2t.netlify.app");
-  res.setHeader("Access-Control-Allow-Origin", " http://localhost:5173");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://amazon-b2t.netlify.app"
+  );
+  // res.setHeader("Access-Control-Allow-Origin", " http://localhost:5173");
   res.setHeader("Access-Control-Allow-Credentials", true);
   res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
