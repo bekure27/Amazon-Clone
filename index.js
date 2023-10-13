@@ -15,10 +15,7 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://amazon-b2t.netlify.app"
-  );
+  res.setHeader("Access-Control-Allow-Origin", "https://amazon-b2t.netlify.app");
   // res.setHeader("Access-Control-Allow-Origin", " http://localhost:5173");
   res.setHeader("Access-Control-Allow-Credentials", true);
   res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
@@ -34,9 +31,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/payments/create", async (request, response) => {
-  // const total = Math.round(request.query.total * 100);
+  const total = Math.round(request.query.total * 100);
 
-  const total = request.query.total;
+  // const total = request.query.total;
 if (total ){
   console.log("total amount ", total);
 
