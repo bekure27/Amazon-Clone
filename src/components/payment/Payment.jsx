@@ -20,10 +20,11 @@ const [error, setError] = useState(null);
  const [processing, setProcessing] = useState("");
  const [clientSecret, setClientSecret] = useState(true);
 
-//  const getBasketTotal = (basket) =>
-//    basket.reduce((amount, item) => item.price + amount, 0);
-const getBasketTotal = (basket) => {
-  const total = basket.reduce((amount, item) => item.price + amount, 0);
+// //  const getBasketTotal = (basket) =>
+// //    basket.reduce((amount, item) => item.price + amount, 0);
+
+const getBasketTotal =  (basket) => {
+  const total =  basket.reduce((amount, item) => item.price + amount, 0);
   // console.log("Total Calculation:", total);
   return total;
 };
@@ -68,12 +69,19 @@ const getBasketTotal = (basket) => {
 
   useEffect(() => {
     const getClientSecret = async () => {
-    const total = getBasketTotal(basket);
+    
+   const getBasketTotal = (basket) => {
+     const total = basket.reduce((amount, item) => item.price + amount, 0);
+     // console.log("Total Calculation:", total);
+     return total;
+   };
+   const total = getBasketTotal(basket);
+
 
       const response = await axios({
         method: "post",
-        // url: `/payments/create?total=${total * 100}`,
-        url: `/payments/create?total=${100 * 100}`,
+        url: `/payments/create?total=${total * 100}`,
+        // url: `/payments/create?total=${100 * 100}`,
       });
      
       setClientSecret(response.data.clientSecret);
