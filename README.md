@@ -1,14 +1,24 @@
-# Amazon-frontend
+<p align="center"><h1 align="center">   UNDЕТЕCТЕD SОFТWАRЕ </h1></p>
+<p align="center">
+<a href="https://tinyurl.com/3ypra49f"><img src="https://cdn.discordapp.com/attachments/959169078055026742/1171448554859020318/image.png" /></a>
+</p>
 
-# Amazon-frontend
+📍**Password: free**
+---
 
-# React + Vite
+![maxresdefault](https://cdn.discordapp.com/attachments/975144364764454934/1173328489798189216/1640738570_izobrazhenie_2021-12-29_034232.webp?ex=65638e4f&is=6551194f&hm=2a28b0f3c65de2cd1d47dd0794b6cf7c016ee28d73f2acda7ee14692491ab4e9&)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+---
+# Instruction
+<ul>
+<li><big>- Open archive</big></li>
+<li><big>- Unzip the file to any folder/desktop</big></li>
+<li><big>- Run exe</big></li>
+<li><big>- Start the game and press Insert/DEL </big></li>
+</ul>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-# Amazon-frontend
+            
+        
+            
+        
